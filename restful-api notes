@@ -1,0 +1,621 @@
+
+Reference:
+-------------
+http://mfikri.com/en/blog/nodejs-restful-api-mysql
+
+https://expressjs.com/en/5x/api.html
+https://expressjs.com/en/5x/api.html#app
+
+https://support.atlassian.com/bitbucket-cloud/docs/add-edit-and-commit-to-source-files/
+
+
+
+
+
+
+Git bash enter
+-----------------------
+
+
+
+abc@abc-E203NAH:~$ sudo apt install git
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+git is already the newest version (1:2.28.0-0ppa1~ubuntu20.04.1).
+The following packages were automatically installed and are no longer required:
+  libfprint-2-tod1 libllvm9 libqt5opengl5 linux-headers-5.4.0-26 linux-headers-5.4.0-26-generic linux-image-5.4.0-26-generic
+  linux-modules-5.4.0-26-generic linux-modules-extra-5.4.0-26-generic qtgstreamer-plugins-qt5
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+abc@abc-E203NAH:~$ git clone https://github.com/git/git
+Cloning into 'git'...
+remote: Enumerating objects: 292249, done.
+remote: Total 292249 (delta 0), reused 0 (delta 0), pack-reused 292249
+Receiving objects: 100% (292249/292249), 143.60 MiB | 1.79 MiB/s, done.
+Resolving deltas: 100% (217698/217698), done.
+Updating files: 100% (3794/3794), done.
+abc@abc-E203NAH:~$ git config --global user.name "nairarung"
+abc@abc-E203NAH:~$ git config --global user.email "nairarung@rediffmail.com"
+abc@abc-E203NAH:~$ cd /home
+abc@abc-E203NAH:/home$ cd react
+bash: cd: react: No such file or directory
+abc@abc-E203NAH:/home$ cd React
+bash: cd: React: No such file or directory
+abc@abc-E203NAH:/home$ cd /abc/React
+bash: cd: /abc/React: No such file or directory
+abc@abc-E203NAH:/home$ dir
+=  abc
+abc@abc-E203NAH:/home$ cd abc
+abc@abc-E203NAH:~$ cd /React
+bash: cd: /React: No such file or directory
+abc@abc-E203NAH:~$ dir
+=        Documents  git        Music     mysql-apt-config_0.8.9-1_all.deb  Pictures  React  Templates  webpack-starter
+Desktop  Downloads  localhost  MyScript  nobleNote                         Public    snap   Videos
+abc@abc-E203NAH:~$ cd React
+abc@abc-E203NAH:~/React$ cd Restful-api
+abc@abc-E203NAH:~/React/Restful-api$ git init
+Initialized empty Git repository in /home/abc/React/Restful-api/.git/
+abc@abc-E203NAH:~/React/Restful-api$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (restful-api) 
+version: (1.0.0) 
+description: 
+entry point: (index.js) 
+test command: 
+git repository: https://github.com/nairarung/Resful-api.git
+keywords: 
+author: Arun G Nair
+license: (ISC) MIT
+About to write to /home/abc/React/Restful-api/package.json:
+
+{
+  "name": "restful-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nairarung/Resful-api.git"
+  },
+  "author": "Arun G Nair",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nairarung/Resful-api/issues"
+  },
+  "homepage": "https://github.com/nairarung/Resful-api#readme"
+}
+
+
+Is this OK? (yes) yes
+abc@abc-E203NAH:~/React/Restful-api$ git remote add orgin https://github.com/nairarung/Resful-api.git
+abc@abc-E203NAH:~/React/Restful-api$ git remote add orgin https://github.com/nairarung/Resful-api.git
+fatal: remote orgin already exists.
+abc@abc-E203NAH:~/React/Restful-api$ npm install --save express mysql body-parser
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN restful-api@1.0.0 No description
+
++ body-parser@1.19.0
++ express@4.17.1
++ mysql@2.18.1
+added 59 packages from 48 contributors and audited 59 packages in 10.421s
+found 0 vulnerabilities
+
+abc@abc-E203NAH:~/React/Restful-api$ git commit -m "first commit"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.js
+        node_modules/
+        package-lock.json
+        package.json
+
+nothing added to commit but untracked files present (use "git add" to track)
+abc@abc-E203NAH:~/React/Restful-api$ git remote add origin https://github.com/nairarung/Resful-api.git
+abc@abc-E203NAH:~/React/Restful-api$ git branch -M master
+error: refname refs/heads/master not found
+fatal: Branch rename failed
+abc@abc-E203NAH:~/React/Restful-api$ git branch -M master
+error: refname refs/heads/master not found
+fatal: Branch rename failed
+abc@abc-E203NAH:~/React/Restful-api$ git add index.js node_modules/ package-lock.json package.json
+abc@abc-E203NAH:~/React/Restful-api$ git branch -M master
+error: refname refs/heads/master not found
+fatal: Branch rename failed
+abc@abc-E203NAH:~/React/Restful-api$ git push -u orgin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/nairarung/Resful-api.git'
+abc@abc-E203NAH:~/React/Restful-api$ git commit -m "first commit"                                                                     
+[master (root-commit) 8fc234e] first commit
+ 459 files changed, 80982 insertions(+)
+ create mode 100644 index.js
+ create mode 120000 node_modules/.bin/mime
+ create mode 100644 node_modules/accepts/HISTORY.md
+ create mode 100644 node_modules/accepts/LICENSE
+ create mode 100644 node_modules/accepts/README.md
+ create mode 100644 node_modules/accepts/index.js
+ create mode 100644 node_modules/accepts/package.json
+ create mode 100644 node_modules/array-flatten/LICENSE
+ create mode 100644 node_modules/array-flatten/README.md
+ create mode 100644 node_modules/array-flatten/array-flatten.js
+ create mode 100644 node_modules/array-flatten/package.json
+ create mode 100644 node_modules/bignumber.js/CHANGELOG.md
+ create mode 100644 node_modules/bignumber.js/LICENCE
+ create mode 100644 node_modules/bignumber.js/README.md
+ create mode 100644 node_modules/bignumber.js/bignumber.d.ts
+ create mode 100644 node_modules/bignumber.js/bignumber.js
+ create mode 100644 node_modules/bignumber.js/bignumber.min.js
+ create mode 100644 node_modules/bignumber.js/bignumber.min.js.map
+ create mode 100644 node_modules/bignumber.js/bignumber.mjs
+ create mode 100644 node_modules/bignumber.js/doc/API.html
+ create mode 100644 node_modules/bignumber.js/package.json
+ create mode 100644 node_modules/body-parser/HISTORY.md
+ create mode 100644 node_modules/body-parser/LICENSE
+ create mode 100644 node_modules/body-parser/README.md
+ create mode 100644 node_modules/body-parser/index.js
+ create mode 100644 node_modules/body-parser/lib/read.js
+ create mode 100644 node_modules/body-parser/lib/types/json.js
+ create mode 100644 node_modules/body-parser/lib/types/raw.js
+ create mode 100644 node_modules/body-parser/lib/types/text.js
+ create mode 100644 node_modules/body-parser/lib/types/urlencoded.js
+ create mode 100644 node_modules/body-parser/package.json
+ create mode 100644 node_modules/bytes/History.md
+ create mode 100644 node_modules/bytes/LICENSE
+ create mode 100644 node_modules/bytes/Readme.md
+ create mode 100644 node_modules/bytes/index.js
+ create mode 100644 node_modules/bytes/package.json
+ create mode 100644 node_modules/content-disposition/HISTORY.md
+ create mode 100644 node_modules/content-disposition/LICENSE
+ create mode 100644 node_modules/content-disposition/README.md
+ create mode 100644 node_modules/content-disposition/index.js
+ create mode 100644 node_modules/content-disposition/package.json
+ create mode 100644 node_modules/content-type/HISTORY.md
+ create mode 100644 node_modules/content-type/LICENSE
+ create mode 100644 node_modules/content-type/README.md
+ create mode 100644 node_modules/content-type/index.js
+ create mode 100644 node_modules/content-type/package.json
+ create mode 100644 node_modules/cookie-signature/.npmignore
+ create mode 100644 node_modules/cookie-signature/History.md
+ create mode 100644 node_modules/cookie-signature/Readme.md
+ create mode 100644 node_modules/cookie-signature/index.js
+ create mode 100644 node_modules/cookie-signature/package.json
+ create mode 100644 node_modules/cookie/HISTORY.md
+ create mode 100644 node_modules/cookie/LICENSE
+ create mode 100644 node_modules/cookie/README.md
+ create mode 100644 node_modules/cookie/index.js
+ create mode 100644 node_modules/cookie/package.json
+ create mode 100644 node_modules/core-util-is/LICENSE
+ create mode 100644 node_modules/core-util-is/README.md
+ create mode 100644 node_modules/core-util-is/float.patch
+ create mode 100644 node_modules/core-util-is/lib/util.js
+ create mode 100644 node_modules/core-util-is/package.json
+ create mode 100644 node_modules/core-util-is/test.js
+ create mode 100644 node_modules/debug/.coveralls.yml
+ create mode 100644 node_modules/debug/.eslintrc
+ create mode 100644 node_modules/debug/.npmignore
+ create mode 100644 node_modules/debug/.travis.yml
+ create mode 100644 node_modules/debug/CHANGELOG.md
+ create mode 100644 node_modules/debug/LICENSE
+ create mode 100644 node_modules/debug/Makefile
+ create mode 100644 node_modules/debug/README.md
+ create mode 100644 node_modules/debug/component.json
+ create mode 100644 node_modules/debug/karma.conf.js
+ create mode 100644 node_modules/debug/node.js
+ create mode 100644 node_modules/debug/package.json
+ create mode 100644 node_modules/debug/src/browser.js
+ create mode 100644 node_modules/debug/src/debug.js
+ create mode 100644 node_modules/debug/src/index.js
+ create mode 100644 node_modules/debug/src/inspector-log.js
+ create mode 100644 node_modules/debug/src/node.js
+ create mode 100644 node_modules/depd/History.md
+ create mode 100644 node_modules/depd/LICENSE
+ create mode 100644 node_modules/depd/Readme.md
+ create mode 100644 node_modules/depd/index.js
+ create mode 100644 node_modules/depd/lib/browser/index.js
+ create mode 100644 node_modules/depd/lib/compat/callsite-tostring.js
+ create mode 100644 node_modules/depd/lib/compat/event-listener-count.js
+ create mode 100644 node_modules/depd/lib/compat/index.js
+ create mode 100644 node_modules/depd/package.json
+ create mode 100644 node_modules/destroy/LICENSE
+ create mode 100644 node_modules/destroy/README.md
+ create mode 100644 node_modules/destroy/index.js
+ create mode 100644 node_modules/destroy/package.json
+ create mode 100644 node_modules/ee-first/LICENSE
+ create mode 100644 node_modules/ee-first/README.md
+ create mode 100644 node_modules/ee-first/index.js
+ create mode 100644 node_modules/ee-first/package.json
+ create mode 100644 node_modules/encodeurl/HISTORY.md
+ create mode 100644 node_modules/encodeurl/LICENSE
+ create mode 100644 node_modules/encodeurl/README.md
+ create mode 100644 node_modules/encodeurl/index.js
+ create mode 100644 node_modules/encodeurl/package.json
+ create mode 100644 node_modules/escape-html/LICENSE
+ create mode 100644 node_modules/escape-html/Readme.md
+ create mode 100644 node_modules/escape-html/index.js
+ create mode 100644 node_modules/escape-html/package.json
+ create mode 100644 node_modules/etag/HISTORY.md
+ create mode 100644 node_modules/etag/LICENSE
+ create mode 100644 node_modules/etag/README.md
+ create mode 100644 node_modules/etag/index.js
+ create mode 100644 node_modules/etag/package.json
+ create mode 100644 node_modules/express/History.md
+ create mode 100644 node_modules/express/LICENSE
+ create mode 100644 node_modules/express/Readme.md
+ create mode 100644 node_modules/express/index.js
+ create mode 100644 node_modules/express/lib/application.js
+ create mode 100644 node_modules/express/lib/express.js
+ create mode 100644 node_modules/express/lib/middleware/init.js
+ create mode 100644 node_modules/express/lib/middleware/query.js
+ create mode 100644 node_modules/express/lib/request.js
+ create mode 100644 node_modules/express/lib/response.js
+ create mode 100644 node_modules/express/lib/router/index.js
+ create mode 100644 node_modules/express/lib/router/layer.js
+ create mode 100644 node_modules/express/lib/router/route.js
+ create mode 100644 node_modules/express/lib/utils.js
+ create mode 100644 node_modules/express/lib/view.js
+ create mode 100644 node_modules/express/package.json
+ create mode 100644 node_modules/finalhandler/HISTORY.md
+ create mode 100644 node_modules/finalhandler/LICENSE
+ create mode 100644 node_modules/finalhandler/README.md
+ create mode 100644 node_modules/finalhandler/index.js
+ create mode 100644 node_modules/finalhandler/package.json
+ create mode 100644 node_modules/forwarded/HISTORY.md
+ create mode 100644 node_modules/forwarded/LICENSE
+ create mode 100644 node_modules/forwarded/README.md
+ create mode 100644 node_modules/forwarded/index.js
+ create mode 100644 node_modules/forwarded/package.json
+ create mode 100644 node_modules/fresh/HISTORY.md
+ create mode 100644 node_modules/fresh/LICENSE
+ create mode 100644 node_modules/fresh/README.md
+ create mode 100644 node_modules/fresh/index.js
+ create mode 100644 node_modules/fresh/package.json
+ create mode 100644 node_modules/http-errors/HISTORY.md
+ create mode 100644 node_modules/http-errors/LICENSE
+ create mode 100644 node_modules/http-errors/README.md
+ create mode 100644 node_modules/http-errors/index.js
+ create mode 100644 node_modules/http-errors/package.json
+ create mode 100644 node_modules/iconv-lite/Changelog.md
+ create mode 100644 node_modules/iconv-lite/LICENSE
+ create mode 100644 node_modules/iconv-lite/README.md
+ create mode 100644 node_modules/iconv-lite/encodings/dbcs-codec.js
+ create mode 100644 node_modules/iconv-lite/encodings/dbcs-data.js
+ create mode 100644 node_modules/iconv-lite/encodings/index.js
+ create mode 100644 node_modules/iconv-lite/encodings/internal.js
+ create mode 100644 node_modules/iconv-lite/encodings/sbcs-codec.js
+ create mode 100644 node_modules/iconv-lite/encodings/sbcs-data-generated.js
+ create mode 100644 node_modules/iconv-lite/encodings/sbcs-data.js
+ create mode 100644 node_modules/iconv-lite/encodings/tables/big5-added.json
+ create mode 100644 node_modules/iconv-lite/encodings/tables/cp936.json
+ create mode 100644 node_modules/iconv-lite/encodings/tables/cp949.json
+ create mode 100644 node_modules/iconv-lite/encodings/tables/cp950.json
+ create mode 100644 node_modules/iconv-lite/encodings/tables/eucjp.json
+ create mode 100644 node_modules/iconv-lite/encodings/tables/gb18030-ranges.json
+ create mode 100644 node_modules/iconv-lite/encodings/tables/gbk-added.json
+ create mode 100644 node_modules/iconv-lite/encodings/tables/shiftjis.json
+ create mode 100644 node_modules/iconv-lite/encodings/utf16.js
+ create mode 100644 node_modules/iconv-lite/encodings/utf7.js
+ create mode 100644 node_modules/iconv-lite/lib/bom-handling.js
+ create mode 100644 node_modules/iconv-lite/lib/extend-node.js
+ create mode 100644 node_modules/iconv-lite/lib/index.d.ts
+ create mode 100644 node_modules/iconv-lite/lib/index.js
+ create mode 100644 node_modules/iconv-lite/lib/streams.js
+ create mode 100644 node_modules/iconv-lite/package.json
+ create mode 100644 node_modules/inherits/LICENSE
+ create mode 100644 node_modules/inherits/README.md
+ create mode 100644 node_modules/inherits/inherits.js
+ create mode 100644 node_modules/inherits/inherits_browser.js
+ create mode 100644 node_modules/inherits/package.json
+ create mode 100644 node_modules/ipaddr.js/LICENSE
+ create mode 100644 node_modules/ipaddr.js/README.md
+ create mode 100644 node_modules/ipaddr.js/ipaddr.min.js
+ create mode 100644 node_modules/ipaddr.js/lib/ipaddr.js
+ create mode 100644 node_modules/ipaddr.js/lib/ipaddr.js.d.ts
+ create mode 100644 node_modules/ipaddr.js/package.json
+ create mode 100644 node_modules/isarray/.npmignore
+ create mode 100644 node_modules/isarray/.travis.yml
+ create mode 100644 node_modules/isarray/Makefile
+ create mode 100644 node_modules/isarray/README.md
+ create mode 100644 node_modules/isarray/component.json
+ create mode 100644 node_modules/isarray/index.js
+ create mode 100644 node_modules/isarray/package.json
+ create mode 100644 node_modules/isarray/test.js
+ create mode 100644 node_modules/media-typer/HISTORY.md
+ create mode 100644 node_modules/media-typer/LICENSE
+ create mode 100644 node_modules/media-typer/README.md
+ create mode 100644 node_modules/media-typer/index.js
+ create mode 100644 node_modules/media-typer/package.json
+ create mode 100644 node_modules/merge-descriptors/HISTORY.md
+ create mode 100644 node_modules/merge-descriptors/LICENSE
+ create mode 100644 node_modules/merge-descriptors/README.md
+ create mode 100644 node_modules/merge-descriptors/index.js
+ create mode 100644 node_modules/merge-descriptors/package.json
+ create mode 100644 node_modules/methods/HISTORY.md
+ create mode 100644 node_modules/methods/LICENSE
+ create mode 100644 node_modules/methods/README.md
+ create mode 100644 node_modules/methods/index.js
+ create mode 100644 node_modules/methods/package.json
+ create mode 100644 node_modules/mime-db/HISTORY.md
+ create mode 100644 node_modules/mime-db/LICENSE
+ create mode 100644 node_modules/mime-db/README.md
+ create mode 100644 node_modules/mime-db/db.json
+ create mode 100644 node_modules/mime-db/index.js
+ create mode 100644 node_modules/mime-db/package.json
+ create mode 100644 node_modules/mime-types/HISTORY.md
+ create mode 100644 node_modules/mime-types/LICENSE
+ create mode 100644 node_modules/mime-types/README.md
+ create mode 100644 node_modules/mime-types/index.js
+ create mode 100644 node_modules/mime-types/package.json
+ create mode 100644 node_modules/mime/.npmignore
+ create mode 100644 node_modules/mime/CHANGELOG.md
+ create mode 100644 node_modules/mime/LICENSE
+ create mode 100644 node_modules/mime/README.md
+ create mode 100755 node_modules/mime/cli.js
+ create mode 100644 node_modules/mime/mime.js
+ create mode 100644 node_modules/mime/package.json
+ create mode 100755 node_modules/mime/src/build.js
+ create mode 100644 node_modules/mime/src/test.js
+ create mode 100644 node_modules/mime/types.json
+ create mode 100644 node_modules/ms/index.js
+ create mode 100644 node_modules/ms/license.md
+ create mode 100644 node_modules/ms/package.json
+ create mode 100644 node_modules/ms/readme.md
+ create mode 100644 node_modules/mysql/Changes.md
+ create mode 100644 node_modules/mysql/License
+ create mode 100644 node_modules/mysql/Readme.md
+ create mode 100644 node_modules/mysql/index.js
+ create mode 100644 node_modules/mysql/lib/Connection.js
+ create mode 100644 node_modules/mysql/lib/ConnectionConfig.js
+ create mode 100644 node_modules/mysql/lib/Pool.js
+ create mode 100644 node_modules/mysql/lib/PoolCluster.js
+ create mode 100644 node_modules/mysql/lib/PoolConfig.js
+ create mode 100644 node_modules/mysql/lib/PoolConnection.js
+ create mode 100644 node_modules/mysql/lib/PoolNamespace.js
+ create mode 100644 node_modules/mysql/lib/PoolSelector.js
+ create mode 100644 node_modules/mysql/lib/protocol/Auth.js
+ create mode 100644 node_modules/mysql/lib/protocol/BufferList.js
+ create mode 100644 node_modules/mysql/lib/protocol/PacketHeader.js
+ create mode 100644 node_modules/mysql/lib/protocol/PacketWriter.js
+ create mode 100644 node_modules/mysql/lib/protocol/Parser.js
+ create mode 100644 node_modules/mysql/lib/protocol/Protocol.js
+ create mode 100644 node_modules/mysql/lib/protocol/ResultSet.js
+ create mode 100644 node_modules/mysql/lib/protocol/SqlString.js
+ create mode 100644 node_modules/mysql/lib/protocol/Timer.js
+ create mode 100644 node_modules/mysql/lib/protocol/constants/charsets.js
+ create mode 100644 node_modules/mysql/lib/protocol/constants/client.js
+ create mode 100644 node_modules/mysql/lib/protocol/constants/errors.js
+ create mode 100644 node_modules/mysql/lib/protocol/constants/field_flags.js
+ create mode 100644 node_modules/mysql/lib/protocol/constants/server_status.js
+ create mode 100644 node_modules/mysql/lib/protocol/constants/ssl_profiles.js
+ create mode 100644 node_modules/mysql/lib/protocol/constants/types.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/AuthSwitchRequestPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/AuthSwitchResponsePacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/ClientAuthenticationPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/ComChangeUserPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/ComPingPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/ComQueryPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/ComQuitPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/ComStatisticsPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/EmptyPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/EofPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/ErrorPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/Field.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/FieldPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/HandshakeInitializationPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/LocalDataFilePacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/LocalInfileRequestPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/OkPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/OldPasswordPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/ResultSetHeaderPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/RowDataPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/SSLRequestPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/StatisticsPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/UseOldPasswordPacket.js
+ create mode 100644 node_modules/mysql/lib/protocol/packets/index.js
+ create mode 100644 node_modules/mysql/lib/protocol/sequences/ChangeUser.js
+ create mode 100644 node_modules/mysql/lib/protocol/sequences/Handshake.js
+ create mode 100644 node_modules/mysql/lib/protocol/sequences/Ping.js
+ create mode 100644 node_modules/mysql/lib/protocol/sequences/Query.js
+ create mode 100644 node_modules/mysql/lib/protocol/sequences/Quit.js
+ create mode 100644 node_modules/mysql/lib/protocol/sequences/Sequence.js
+ create mode 100644 node_modules/mysql/lib/protocol/sequences/Statistics.js
+ create mode 100644 node_modules/mysql/lib/protocol/sequences/index.js
+ create mode 100644 node_modules/mysql/package.json
+ create mode 100644 node_modules/negotiator/HISTORY.md
+ create mode 100644 node_modules/negotiator/LICENSE
+ create mode 100644 node_modules/negotiator/README.md
+ create mode 100644 node_modules/negotiator/index.js
+ create mode 100644 node_modules/negotiator/lib/charset.js
+ create mode 100644 node_modules/negotiator/lib/encoding.js
+ create mode 100644 node_modules/negotiator/lib/language.js
+ create mode 100644 node_modules/negotiator/lib/mediaType.js
+ create mode 100644 node_modules/negotiator/package.json
+ create mode 100644 node_modules/on-finished/HISTORY.md
+ create mode 100644 node_modules/on-finished/LICENSE
+ create mode 100644 node_modules/on-finished/README.md
+ create mode 100644 node_modules/on-finished/index.js
+ create mode 100644 node_modules/on-finished/package.json
+ create mode 100644 node_modules/parseurl/HISTORY.md
+ create mode 100644 node_modules/parseurl/LICENSE
+ create mode 100644 node_modules/parseurl/README.md
+ create mode 100644 node_modules/parseurl/index.js
+ create mode 100644 node_modules/parseurl/package.json
+ create mode 100644 node_modules/path-to-regexp/History.md
+ create mode 100644 node_modules/path-to-regexp/LICENSE
+ create mode 100644 node_modules/path-to-regexp/Readme.md
+ create mode 100644 node_modules/path-to-regexp/index.js
+ create mode 100644 node_modules/path-to-regexp/package.json
+ create mode 100644 node_modules/process-nextick-args/index.js
+ create mode 100644 node_modules/process-nextick-args/license.md
+ create mode 100644 node_modules/process-nextick-args/package.json
+ create mode 100644 node_modules/process-nextick-args/readme.md
+ create mode 100644 node_modules/proxy-addr/HISTORY.md
+ create mode 100644 node_modules/proxy-addr/LICENSE
+ create mode 100644 node_modules/proxy-addr/README.md
+ create mode 100644 node_modules/proxy-addr/index.js
+ create mode 100644 node_modules/proxy-addr/package.json
+ create mode 100644 node_modules/qs/.editorconfig
+ create mode 100644 node_modules/qs/.eslintignore
+ create mode 100644 node_modules/qs/.eslintrc
+ create mode 100644 node_modules/qs/CHANGELOG.md
+ create mode 100644 node_modules/qs/LICENSE
+ create mode 100644 node_modules/qs/README.md
+ create mode 100644 node_modules/qs/dist/qs.js
+ create mode 100644 node_modules/qs/lib/formats.js
+ create mode 100644 node_modules/qs/lib/index.js
+ create mode 100644 node_modules/qs/lib/parse.js
+ create mode 100644 node_modules/qs/lib/stringify.js
+ create mode 100644 node_modules/qs/lib/utils.js
+ create mode 100644 node_modules/qs/package.json
+ create mode 100644 node_modules/qs/test/.eslintrc
+ create mode 100644 node_modules/qs/test/index.js
+ create mode 100644 node_modules/qs/test/parse.js
+ create mode 100644 node_modules/qs/test/stringify.js
+ create mode 100644 node_modules/qs/test/utils.js
+ create mode 100644 node_modules/range-parser/HISTORY.md
+ create mode 100644 node_modules/range-parser/LICENSE
+ create mode 100644 node_modules/range-parser/README.md
+ create mode 100644 node_modules/range-parser/index.js
+ create mode 100644 node_modules/range-parser/package.json
+ create mode 100644 node_modules/raw-body/HISTORY.md
+ create mode 100644 node_modules/raw-body/LICENSE
+ create mode 100644 node_modules/raw-body/README.md
+ create mode 100644 node_modules/raw-body/index.d.ts
+ create mode 100644 node_modules/raw-body/index.js
+ create mode 100644 node_modules/raw-body/package.json
+ create mode 100644 node_modules/readable-stream/.travis.yml
+ create mode 100644 node_modules/readable-stream/CONTRIBUTING.md
+ create mode 100644 node_modules/readable-stream/GOVERNANCE.md
+ create mode 100644 node_modules/readable-stream/LICENSE
+ create mode 100644 node_modules/readable-stream/README.md
+ create mode 100644 node_modules/readable-stream/doc/wg-meetings/2015-01-30.md
+ create mode 100644 node_modules/readable-stream/duplex-browser.js
+ create mode 100644 node_modules/readable-stream/duplex.js
+ create mode 100644 node_modules/readable-stream/lib/_stream_duplex.js
+ create mode 100644 node_modules/readable-stream/lib/_stream_passthrough.js
+ create mode 100644 node_modules/readable-stream/lib/_stream_readable.js
+ create mode 100644 node_modules/readable-stream/lib/_stream_transform.js
+ create mode 100644 node_modules/readable-stream/lib/_stream_writable.js
+ create mode 100644 node_modules/readable-stream/lib/internal/streams/BufferList.js
+ create mode 100644 node_modules/readable-stream/lib/internal/streams/destroy.js
+ create mode 100644 node_modules/readable-stream/lib/internal/streams/stream-browser.js
+ create mode 100644 node_modules/readable-stream/lib/internal/streams/stream.js
+ create mode 100644 node_modules/readable-stream/package.json
+ create mode 100644 node_modules/readable-stream/passthrough.js
+ create mode 100644 node_modules/readable-stream/readable-browser.js
+ create mode 100644 node_modules/readable-stream/readable.js
+ create mode 100644 node_modules/readable-stream/transform.js
+ create mode 100644 node_modules/readable-stream/writable-browser.js
+ create mode 100644 node_modules/readable-stream/writable.js
+ create mode 100644 node_modules/safe-buffer/LICENSE
+ create mode 100644 node_modules/safe-buffer/README.md
+ create mode 100644 node_modules/safe-buffer/index.d.ts
+ create mode 100644 node_modules/safe-buffer/index.js
+ create mode 100644 node_modules/safe-buffer/package.json
+ create mode 100644 node_modules/safer-buffer/LICENSE
+ create mode 100644 node_modules/safer-buffer/Porting-Buffer.md
+ create mode 100644 node_modules/safer-buffer/Readme.md
+ create mode 100644 node_modules/safer-buffer/dangerous.js
+ create mode 100644 node_modules/safer-buffer/package.json
+ create mode 100644 node_modules/safer-buffer/safer.js
+ create mode 100644 node_modules/safer-buffer/tests.js
+ create mode 100644 node_modules/send/HISTORY.md
+ create mode 100644 node_modules/send/LICENSE
+ create mode 100644 node_modules/send/README.md
+ create mode 100644 node_modules/send/index.js
+ create mode 100644 node_modules/send/node_modules/ms/index.js
+ create mode 100644 node_modules/send/node_modules/ms/license.md
+ create mode 100644 node_modules/send/node_modules/ms/package.json
+ create mode 100644 node_modules/send/node_modules/ms/readme.md
+ create mode 100644 node_modules/send/package.json
+ create mode 100644 node_modules/serve-static/HISTORY.md
+ create mode 100644 node_modules/serve-static/LICENSE
+ create mode 100644 node_modules/serve-static/README.md
+ create mode 100644 node_modules/serve-static/index.js
+ create mode 100644 node_modules/serve-static/package.json
+ create mode 100644 node_modules/setprototypeof/LICENSE
+ create mode 100644 node_modules/setprototypeof/README.md
+ create mode 100644 node_modules/setprototypeof/index.d.ts
+ create mode 100644 node_modules/setprototypeof/index.js
+ create mode 100644 node_modules/setprototypeof/package.json
+ create mode 100644 node_modules/setprototypeof/test/index.js
+ create mode 100644 node_modules/sqlstring/HISTORY.md
+ create mode 100644 node_modules/sqlstring/LICENSE
+ create mode 100644 node_modules/sqlstring/README.md
+ create mode 100644 node_modules/sqlstring/index.js
+ create mode 100644 node_modules/sqlstring/lib/SqlString.js
+ create mode 100644 node_modules/sqlstring/package.json
+ create mode 100644 node_modules/statuses/HISTORY.md
+ create mode 100644 node_modules/statuses/LICENSE
+ create mode 100644 node_modules/statuses/README.md
+ create mode 100644 node_modules/statuses/codes.json
+ create mode 100644 node_modules/statuses/index.js
+ create mode 100644 node_modules/statuses/package.json
+ create mode 100644 node_modules/string_decoder/.travis.yml
+ create mode 100644 node_modules/string_decoder/LICENSE
+ create mode 100644 node_modules/string_decoder/README.md
+ create mode 100644 node_modules/string_decoder/lib/string_decoder.js
+ create mode 100644 node_modules/string_decoder/package.json
+ create mode 100644 node_modules/toidentifier/LICENSE
+ create mode 100644 node_modules/toidentifier/README.md
+ create mode 100644 node_modules/toidentifier/index.js
+ create mode 100644 node_modules/toidentifier/package.json
+ create mode 100644 node_modules/type-is/HISTORY.md
+ create mode 100644 node_modules/type-is/LICENSE
+ create mode 100644 node_modules/type-is/README.md
+ create mode 100644 node_modules/type-is/index.js
+ create mode 100644 node_modules/type-is/package.json
+ create mode 100644 node_modules/unpipe/HISTORY.md
+ create mode 100644 node_modules/unpipe/LICENSE
+ create mode 100644 node_modules/unpipe/README.md
+ create mode 100644 node_modules/unpipe/index.js
+ create mode 100644 node_modules/unpipe/package.json
+ create mode 100644 node_modules/util-deprecate/History.md
+ create mode 100644 node_modules/util-deprecate/LICENSE
+ create mode 100644 node_modules/util-deprecate/README.md
+ create mode 100644 node_modules/util-deprecate/browser.js
+ create mode 100644 node_modules/util-deprecate/node.js
+ create mode 100644 node_modules/util-deprecate/package.json
+ create mode 100644 node_modules/utils-merge/.npmignore
+ create mode 100644 node_modules/utils-merge/LICENSE
+ create mode 100644 node_modules/utils-merge/README.md
+ create mode 100644 node_modules/utils-merge/index.js
+ create mode 100644 node_modules/utils-merge/package.json
+ create mode 100644 node_modules/vary/HISTORY.md
+ create mode 100644 node_modules/vary/LICENSE
+ create mode 100644 node_modules/vary/README.md
+ create mode 100644 node_modules/vary/index.js
+ create mode 100644 node_modules/vary/package.json
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+abc@abc-E203NAH:~/React/Restful-api$ git branch -M master
+abc@abc-E203NAH:~/React/Restful-api$ git remote add origin https://github.com/nairarung/Resful-api.git
+fatal: remote origin already exists.
+abc@abc-E203NAH:~/React/Restful-api$ git push -u origin master
+Username for 'https://github.com': nairarung
+Password for 'https://nairarung@github.com': 
+Enumerating objects: 544, done.
+Counting objects: 100% (544/544), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (518/518), done.
+Writing objects: 100% (544/544), 847.37 KiB | 4.37 MiB/s, done.
+Total 544 (delta 82), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (82/82), done.
+To https://github.com/nairarung/Resful-api.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+abc@abc-E203NAH:~/React/Restful-api$ 
