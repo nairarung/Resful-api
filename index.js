@@ -54,9 +54,9 @@ app.get('/api/tasks/:tskid',(req,res) => {
   });
 
   //update the task
-app.get('/api/tasks/:tskid',(req,res) => {
-    let sql = "UPDATE GAMEPLAN TSK_name='" + req.body.TSK_name +"', TSK_desc='"+req.body.TSK_desc+
-               "', TSK_owner='" + req.body.TSK_owner + "', TSK_frm='"+req.body.TSK_frm+ "', TSK_to='"+req.body.TSK_to+  
+app.put('/api/tasks/:tskid',(req,res) => {
+    let sql = "UPDATE GAMEPLAN SET TSK_name='" + req.body.TSK_name +"', TSK_desc='"+req.body.TSK_desc+
+               "', TSK_owner='" + req.body.TSK_owner+"', TSK_frm='"+req.body.TSK_frm+ "', TSK_to='"+req.body.TSK_to+  
                "' where TSK_id=" + req.params.tskid;
     let query = conn.query(sql,(err,result) => {
        if(err) throw err;
@@ -66,7 +66,7 @@ app.get('/api/tasks/:tskid',(req,res) => {
    });
 
   //Delete the task
-app.get('/api/tasks/:tskid',(req,res) => {
+app.delete('/api/tasks/:tskid',(req,res) => {
     let sql = "DELETE FROM GAMEPLAN where TSK_id=" + req.params.tskid;
     let query = conn.query(sql,(err,result) => {
        if(err) throw err;
